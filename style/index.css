@@ -268,7 +268,11 @@ footer nav a {
 
 }
 /* Animations */
-@keyframes box-colors {
-    from {background-color: teal; }
-    to {bakground-color: gold;}
+@keyframes boxColors {
+    from {
+        background-color: teal; 
+    }
+    to {
+        background-color: gold;
+    }
 }
