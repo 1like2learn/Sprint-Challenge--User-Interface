@@ -85,8 +85,17 @@ header nav{
     text-decoration: none;
     display:flex;
     justify-content: space-evenly;
-    width: 79%;
+    width: 76%;
     margin: 3% 0;
+}
+header nav a:link{
+    text-decoration: none;
+    color: black;
+    
+}
+header nav a:visited{
+    color: black;
+    
 }
 header img.splash-image{
     width:100%;
@@ -133,6 +142,9 @@ header img.splash-image{
 }
 .middle-content .boxes .box1{
     background-color:teal;
+    animation-name: box-colors;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
 }
 .middle-content .boxes .box2{
     background-color: gold;
@@ -202,6 +214,9 @@ footer nav a {
     header .logo{
         margin: 3%
     }
+    header nav{
+        width:70%;
+    }
     .top-content{
         flex-direction: column;
     }
@@ -251,4 +266,9 @@ footer nav a {
         width: 80%;
     }
 
+}
+/* Animations */
+@keyframes box-colors {
+    from {background-color: teal; }
+    to {bakground-color: gold;}
 }
