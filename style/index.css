@@ -19,9 +19,10 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
+	font-size: 62.5%;
 	font: inherit;
-	vertical-align: baseline;
+    vertical-align: baseline;
+    /* border: 2px grey solid; */
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -55,10 +56,10 @@ html, body {
     height: 100%;
     font-family: 'Roboto', sans-serif;
 }
-
-h1, h2, h3, h4, h5 {
-    font-size: 18px;
-    margin-bottom: 15px;
+/* General Styles */
+h2, h3, h4, h5 {
+    font-size: 1.5rem;
+    margin-bottom: 5%;
     font-family: 'Rubik', sans-serif;
 }
 
@@ -67,31 +68,61 @@ p {
 }
 
 .container {
-    width: 800px;
-    margin: 0 auto;
+    max-width: 800px;
+    margin: 2% auto 0 auto;
 }
+/* Header*/
+header{
+    display: flex;
+    flex-wrap: wrap;
 
+}
+header img.logo{
+    margin-bottom: 3%;
+    max-width: 21%;
+}
+header nav{
+    text-decoration: none;
+    display:flex;
+    justify-content: space-evenly;
+    width: 76%;
+    margin: 3% 0;
+}
+header nav a:link{
+    text-decoration: none;
+    color: black;
+    
+}
+header nav a:visited{
+    color: black;
+    
+}
+header img.splash-image{
+    width:100%;
+    object-fit: cover;
+}
+/* Top Content */
 .top-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    margin-bottom: 20px;
+    margin-bottom: 2%;
     border-bottom: 1px dashed black;
 }
 
 .top-content .text-container {
     width: 48%;
-    padding: 0 1%;
-    padding-bottom: 20px;  
+    padding: 2% 1%;  
 }
 
+/* Middle Content */
 .middle-content {
-    margin-bottom: 20px;
+    margin-bottom: 2%;
     border-bottom: 1px dashed black;
 }
 
 .middle-content h2 {
-    padding: 0 2%;
+    padding: 1% 0 0 2%;
     margin-bottom: 0;
 }
 
@@ -101,20 +132,52 @@ p {
     justify-content: space-evenly;
 }
 
-.middle-content .boxes .box {
-    width: 12.5%;
-    height: 100px;
-    background: black;
-    margin: 20px 2.5%;
+.middle-content .boxes div{
+    margin: 2% 2.5%;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding:5% 4%;
+}
+.middle-content .boxes .box1{
+    background-color:teal;
+    animation-name: box-colors;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+}
+.middle-content .boxes .box2{
+    background-color: gold;
+}
+.middle-content .boxes .box3{
+    background-color:cadetblue;
+}
+.middle-content .boxes .box4{
+    background-color: coral;
+}
+.middle-content .boxes .box5{
+    background-color: crimson;
+}
+.middle-content .boxes .box6{
+    background-color:forestgreen;
+}
+.middle-content .boxes .box7{
+    background-color: darkorchid;
+}
+.middle-content .boxes .box8{
+    background-color:hotpink;
+}
+.middle-content .boxes .box9{
+    background-color: indigo;
+}
+.middle-content .boxes .box10{
+    background-color: dodgerblue;
 }
 
+/* Bottom Content */
 .bottom-content {
     display: flex;
-    margin: 0 2% 20px;
+    margin: 0 2% 2%;
     justify-content: space-around;
 }
 
@@ -136,11 +199,80 @@ footer nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 2%;
-    font-size: 14px;
+    padding: 2% 2%;
+    font-size: 1rem;
+    margin: 0 auto;
 }
 
 footer nav a {
     color: white;
     text-decoration: none;
+}
+/* Media Queries*/
+
+@media (max-width:800px){
+    header .logo{
+        margin: 3%
+    }
+    header nav{
+        width:70%;
+    }
+    .top-content{
+        flex-direction: column;
+    }
+    .top-content .text-container{
+        width: 96%;
+        margin: 0 auto;
+    }
+    .top-content .text-container h2{
+        margin: 0;
+    }
+    .middle-content div.boxes{
+        padding: 3%;
+    }
+    .middle-content div.boxes div{
+        padding: 17% 15%;
+    }
+    .bottom-content{
+        flex-wrap: wrap;
+    }
+    .bottom-content .text-container {
+        padding-right: 4%;
+        width:45%;
+    }
+    .bottom-content .text-container{
+        padding:3%;
+    }
+}
+@media (max-width:500px){
+    header{
+        flex-direction: column;
+        align-items: center;
+    }
+    header nav{
+        flex-direction: column;
+    }
+    header nav a{
+        text-align: center;
+        margin: 2% 0;
+    }
+    .middle-content h2{
+        text-align: center;
+    }
+    .middle-content div.boxes div{
+        padding: 25% 29%;
+    }
+    footer nav{
+        width: 80%;
+    }
+
+}
+/* Animations */
+@keyframes boxColors {
+    from {
+        background-color: teal; 
+    }
+    to {
+        background-color: gold;
+    }
 }
