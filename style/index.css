@@ -19,9 +19,10 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
+	font-size: 62.5%;
 	font: inherit;
-	vertical-align: baseline;
+    vertical-align: baseline;
+    border: 2px grey solid;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -55,10 +56,25 @@ html, body {
     height: 100%;
     font-family: 'Roboto', sans-serif;
 }
+header{
+    display: flex;
+    flex-wrap: wrap;
 
-h1, h2, h3, h4, h5 {
-    font-size: 18px;
-    margin-bottom: 15px;
+}
+header nav{
+    text-decoration: none;
+    display:flex;
+    justify-content: space-evenly;
+    width: 79%;
+    margin: 0 3%;
+}
+header img.splash-image{
+    width:100%;
+    object-fit: cover;
+}
+h2, h3, h4, h5 {
+    font-size: 1.5rem;
+    margin-bottom: 5%;
     font-family: 'Rubik', sans-serif;
 }
 
@@ -67,26 +83,25 @@ p {
 }
 
 .container {
-    width: 800px;
-    margin: 0 auto;
+    max-width: 800px;
+    margin: 2% auto 0 auto;
 }
 
 .top-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    margin-bottom: 20px;
+    margin-bottom: 2%;
     border-bottom: 1px dashed black;
 }
 
 .top-content .text-container {
     width: 48%;
-    padding: 0 1%;
-    padding-bottom: 20px;  
+    padding: 2% 1%;  
 }
 
 .middle-content {
-    margin-bottom: 20px;
+    margin-bottom: 2%;
     border-bottom: 1px dashed black;
 }
 
@@ -105,7 +120,7 @@ p {
     width: 12.5%;
     height: 100px;
     background: black;
-    margin: 20px 2.5%;
+    margin: 2% 2.5%;
     color: white;
     display: flex;
     align-items: center;
@@ -114,7 +129,7 @@ p {
 
 .bottom-content {
     display: flex;
-    margin: 0 2% 20px;
+    margin: 0 2% 2%;
     justify-content: space-around;
 }
 
@@ -136,11 +151,15 @@ footer nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 2%;
-    font-size: 14px;
+    padding: 2% 2%;
+    font-size: 1rem;
+    margin: 0 auto;
 }
 
 footer nav a {
     color: white;
     text-decoration: none;
 }
+/* Media Queries*/
+
+@media ()
