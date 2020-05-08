@@ -22,7 +22,7 @@ time, mark, audio, video {
 	font-size: 62.5%;
 	font: inherit;
     vertical-align: baseline;
-    border: 2px grey solid;
+    /* border: 2px grey solid; */
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -113,7 +113,7 @@ header img.splash-image{
 }
 
 .middle-content h2 {
-    padding: 0 2%;
+    padding: 1% 0 0 2%;
     margin-bottom: 0;
 }
 
@@ -199,34 +199,50 @@ footer nav a {
 /* Media Queries*/
 
 @media (max-width:800px){
-    header{
-        flex-direction: column;
-        align-items: center;
+    header .logo{
+        margin: 3%
     }
-    header img.logo{
-        max-width: 40%;
-    }
-    .middle-content div.boxes div{
-        padding: 17% 15%;
-    }
-    .bottom-content{
-        flex-direction: column;
-        margin:2%;
-    }
-    .bottom-content .text-container{
-        padding:0;
-    }
-    .bottom-content h2{
-        text-align: center;
-    }
-}
-@media (max-width:500px){
     .top-content{
         flex-direction: column;
     }
     .top-content .text-container{
         width: 96%;
         margin: 0 auto;
+    }
+    .top-content .text-container h2{
+        margin: 0;
+    }
+    .middle-content div.boxes{
+        padding: 3%;
+    }
+    .middle-content div.boxes div{
+        padding: 17% 15%;
+    }
+    .bottom-content{
+        flex-wrap: wrap;
+    }
+    .bottom-content .text-container {
+        padding-right: 4%;
+        width:45%;
+    }
+    .bottom-content .text-container{
+        padding:3%;
+    }
+}
+@media (max-width:500px){
+    header{
+        flex-direction: column;
+        align-items: center;
+    }
+    header nav{
+        flex-direction: column;
+    }
+    header nav a{
+        text-align: center;
+        margin: 2% 0;
+    }
+    .middle-content h2{
+        text-align: center;
     }
     .middle-content div.boxes div{
         padding: 25% 29%;
